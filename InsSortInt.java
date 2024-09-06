@@ -18,14 +18,15 @@ public class InsSortInt {
             return;
         }
         int[] A = new int[numbersList.size()];
-        for(int i = 1; i < A.length; i++){
+        for(int i = 0; i < A.length; i++){
             A[i] = Integer.parseInt(numbersList.get(i));
         }
         insort(A);
     }
 
     private static void insort(int[] A){   
-        for (int i = 1; i < A.length; i++) {
+        int n = A.length;
+        for (int i = 1; i < n; i++) {
             int key = A[i];
             int j = i - 1;
             while (j >= 0 && A[j] > key) {
